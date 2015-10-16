@@ -1,6 +1,8 @@
 import redirect from '../utils/redirect';
 
-export var initialize = function(container, app, config) {
+export var initialize = function() {
+  let application = arguments[0];
+  let config = arguments[1];
   var url = config.cordova.emberUrl || 'http://localhost:4200';
   return redirect(url);
 };
